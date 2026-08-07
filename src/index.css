@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  /* Aqui entra o seu degradê linear (Linear Gradient) */
+  background: linear-gradient(135deg, #a4bffa 0%, #F5F5F5 100%);
+  
+  /* Mudamos a cor do texto padrão para um cinza bem escuro para dar contraste */
+  color: #0f172a; 
+  
+  /* Isso garante que o degradê ocupe a tela toda e não quebre se a página rolar */
+  min-height: 100vh;
+  background-attachment: fixed; 
+}
