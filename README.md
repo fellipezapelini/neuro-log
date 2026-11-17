@@ -127,6 +127,12 @@ flowchart LR
 
 > Todas as telas usam **pacientes de teste**; telefones e CPFs foram borrados.
 
+**Agenda:** visão por dia, semana ou mês, com busca de paciente e impressão
+![Agenda semanal](docs/agenda.png)
+
+**Dashboard:** agendamentos, consultas realizadas, faltas, cancelamentos, faturamento e perfil dos atendimentos por período
+![Dashboard do consultório](docs/dashboard.png)
+
 **Prontuário estruturado:** anamnese, exame físico, testes e escalas, hipóteses (CID-10) e conduta, com atalhos para Análise IA, Prescrição Inteligente e Atendimento Online
 ![Prontuário estruturado](docs/prontuario.png)
 
@@ -141,9 +147,6 @@ flowchart LR
 
 **Pacientes:** busca por nome, CPF ou número do prontuário
 ![Lista de pacientes](docs/pacientes.png)
-
-<!-- Próximos prints: docs/agenda.png e docs/dashboard.png -->
-
 <img src="src/assets/mobile.png" alt="Neuro-Log no celular" width="260">
 
 🎬 [Vídeo de demonstração](public/assets/demo-C21IEXB2.mp4)
