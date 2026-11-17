@@ -125,12 +125,24 @@ flowchart LR
 
 ## Capturas de tela
 
-<!-- Coloque os prints em docs/ e descomente:
-     ![Agenda semanal](docs/agenda.png)
-     ![Prontuário estruturado](docs/prontuario.png)
-     ![Teleconsulta](docs/teleconsulta.png)
-     ![Receita assinada](docs/receita.png)
-     Use apenas pacientes de teste. -->
+> Todas as telas usam **pacientes de teste**; telefones e CPFs foram borrados.
+
+**Prontuário estruturado:** anamnese, exame físico, testes e escalas, hipóteses (CID-10) e conduta, com atalhos para Análise IA, Prescrição Inteligente e Atendimento Online
+![Prontuário estruturado](docs/prontuario.png)
+
+**Teleconsulta:** prontuário e vídeo lado a lado, aguardando o consentimento do paciente
+![Teleconsulta com prontuário ao lado](docs/teleconsulta.png)
+
+**Receituário digital:** receita simples, controle especial, azul/amarela (Memed) e exames, com envio por WhatsApp e PDF assinado ICP-Brasil
+![Receituário digital](docs/receituario.png)
+
+**Integração Memed:** prescrição dentro do Neuro-Log, já com o paciente preenchido
+![Prescrição pela Memed](docs/receita-memed.png)
+
+**Pacientes:** busca por nome, CPF ou número do prontuário
+![Lista de pacientes](docs/pacientes.png)
+
+<!-- Próximos prints: docs/agenda.png e docs/dashboard.png -->
 
 <img src="src/assets/mobile.png" alt="Neuro-Log no celular" width="260">
 
