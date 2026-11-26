@@ -36,7 +36,7 @@ function LegalDocs() {
       <div className="max-w-4xl mx-auto bg-white p-6 sm:p-8 md:p-16 rounded-[40px] shadow-xl border border-slate-200">
         <div className="text-center mb-10 border-b border-slate-200 pb-8">
           <h1 className="text-4xl font-black text-slate-900 mb-4">Documentação Legal</h1>
-          <p className="text-lg text-slate-500">Política de Privacidade, Termos de Uso e Acordo de Tratamento de Dados do NeuroLog</p>
+          <p className="text-lg text-slate-500">Política de Privacidade, Termos de Uso e Acordo de Tratamento de Dados do Neuro-Log</p>
           <p className="text-sm text-slate-400 mt-3">Versão {VERSAO} · vigente desde {VIGENCIA}</p>
           <nav className="flex flex-wrap justify-center gap-3 mt-6 text-sm font-bold">
             <a href="#privacidade" className="text-[#092c77] hover:underline">Política de Privacidade</a>
@@ -52,7 +52,7 @@ function LegalDocs() {
           <H2 id="privacidade">Política de Privacidade</H2>
 
           <P>
-            Esta Política explica como o <strong>NeuroLog</strong>, plataforma de prontuário eletrônico, agenda e
+            Esta Política explica como o <strong>Neuro-Log</strong>, plataforma de prontuário eletrônico, agenda e
             teleconsulta, trata dados pessoais de seus <strong>USUÁRIOS</strong> (médicos, profissionais de saúde,
             clínicas e suas secretárias) e dos <strong>PACIENTES</strong> cujos dados os USUÁRIOS registram no sistema,
             conforme a Lei Geral de Proteção de Dados (Lei 13.709/2018 – LGPD).
@@ -60,7 +60,7 @@ function LegalDocs() {
 
           <H3>1. Quem somos e como falar conosco</H3>
           <P>
-            O NeuroLog é mantido por <strong>{EMPRESA}</strong>, inscrita no CNPJ sob o nº <strong>{CNPJ}</strong>, com
+            O Neuro-Log é mantido por <strong>{EMPRESA}</strong>, inscrita no CNPJ sob o nº <strong>{CNPJ}</strong>, com
             sede em Londrina/PR. O Encarregado pelo Tratamento de Dados Pessoais é{' '}
             <strong>Fellipe Valentino Zapelini</strong>. Pedidos sobre dados pessoais, dúvidas e
             comunicações de incidentes: e-mail{' '}
@@ -75,11 +75,11 @@ function LegalDocs() {
               registrar e para quê, e responde perante o paciente e as autoridades.
             </li>
             <li>
-              <strong>O NeuroLog é Operador</strong> desses dados: trata-os somente para prestar o serviço contratado e
+              <strong>O Neuro-Log é Operador</strong> desses dados: trata-os somente para prestar o serviço contratado e
               conforme as instruções do USUÁRIO (detalhes no Acordo de Tratamento de Dados, abaixo).
             </li>
             <li>
-              <strong>O NeuroLog é Controlador</strong> apenas dos dados de cadastro, acesso e contratação dos próprios
+              <strong>O Neuro-Log é Controlador</strong> apenas dos dados de cadastro, acesso e contratação dos próprios
               USUÁRIOS.
             </li>
           </UL>
@@ -92,7 +92,7 @@ function LegalDocs() {
           <UL>
             <li>Finalidades: criar e proteger a conta, confirmar que o médico tem registro ativo no CRM, prestar suporte, cobrar a assinatura e cumprir obrigações legais.</li>
             <li>Bases legais: execução de contrato, cumprimento de obrigação legal e legítimo interesse na segurança da plataforma (art. 7º, II, V e IX da LGPD).</li>
-            <li>O NeuroLog <strong>não guarda número de cartão</strong>. Pagamentos são feitos pelos meios informados na contratação.</li>
+            <li>O Neuro-Log <strong>não guarda número de cartão</strong>. Pagamentos são feitos pelos meios informados na contratação.</li>
           </UL>
           <P>
             <strong>3.2. Dados dos PACIENTES</strong> (registrados pelo USUÁRIO): identificação e contato, convênio,
@@ -180,7 +180,7 @@ function LegalDocs() {
           <UL>
             <li>
               <strong>Prontuário:</strong> no mínimo <strong>20 anos</strong> a partir do último registro (Lei 13.787/2018).
-              O NeuroLog não apaga prontuários.
+              O Neuro-Log não apaga prontuários.
             </li>
             <li>
               <strong>Após o fim da assinatura:</strong> os prontuários continuam guardados, com as mesmas medidas de
@@ -199,14 +199,14 @@ function LegalDocs() {
             obrigação legal, os dados do prontuário não podem ser eliminados antes do fim do prazo de guarda.
           </P>
           <UL>
-            <li><strong>Pacientes</strong> devem fazer o pedido ao médico ou à clínica que os atendeu (Controlador). O NeuroLog apoia o USUÁRIO no atendimento desses pedidos.</li>
+            <li><strong>Pacientes</strong> devem fazer o pedido ao médico ou à clínica que os atendeu (Controlador). O Neuro-Log apoia o USUÁRIO no atendimento desses pedidos.</li>
             <li><strong>USUÁRIOS</strong> podem fazer o pedido diretamente pelo e-mail do Encarregado.</li>
             <li>Também é possível peticionar à Autoridade Nacional de Proteção de Dados (ANPD).</li>
           </UL>
 
           <H3>8. Incidentes de segurança</H3>
           <P>
-            Se houver incidente que possa causar risco ou dano relevante, o NeuroLog avisará o USUÁRIO afetado em até 48
+            Se houver incidente que possa causar risco ou dano relevante, o Neuro-Log avisará o USUÁRIO afetado em até 48
             horas da ciência, com as informações disponíveis, e apoiará as comunicações à ANPD e aos titulares, nos prazos
             da regulamentação.
           </P>
@@ -218,12 +218,12 @@ function LegalDocs() {
         {/* ───────────────────────────── TERMOS DE USO ───────────────────────────── */}
         <section className="mb-16">
           <H2 id="termos">Termos de Uso</H2>
-          <P>Ao criar uma conta ou usar o NeuroLog, o USUÁRIO concorda com estes Termos e com a Política de Privacidade acima.</P>
+          <P>Ao criar uma conta ou usar o Neuro-Log, o USUÁRIO concorda com estes Termos e com a Política de Privacidade acima.</P>
 
           <H3>1. O serviço</H3>
           <P>
-            O NeuroLog é um software oferecido pela internet (SaaS) para prontuário eletrônico, agenda, emissão de
-            documentos, teleconsulta, integração com a Memed e recursos de Inteligência Artificial de apoio. O NeuroLog não
+            O Neuro-Log é um software oferecido pela internet (SaaS) para prontuário eletrônico, agenda, emissão de
+            documentos, teleconsulta, integração com a Memed e recursos de Inteligência Artificial de apoio. O Neuro-Log não
             presta serviço médico.
           </P>
 
@@ -247,13 +247,13 @@ function LegalDocs() {
           <P>
             Ao usar a teleconsulta, o médico deve seguir as normas do CFM sobre telemedicina (Resolução CFM 2.314/2022),
             incluindo o consentimento do paciente e o registro do atendimento no prontuário. As chamadas não são gravadas
-            pelo NeuroLog.
+            pelo Neuro-Log.
           </P>
 
           <H3>5. Assinatura digital e integrações</H3>
           <UL>
             <li>A guarda e a validade do certificado digital são responsabilidade do médico titular.</li>
-            <li>A Memed e os demais serviços integrados têm termos próprios; indisponibilidades desses serviços fogem ao controle do NeuroLog.</li>
+            <li>A Memed e os demais serviços integrados têm termos próprios; indisponibilidades desses serviços fogem ao controle do Neuro-Log.</li>
           </UL>
 
           <H3>6. Usos proibidos</H3>
@@ -286,7 +286,7 @@ function LegalDocs() {
 
           <H3>10. Responsabilidade</H3>
           <P>
-            O NeuroLog responde pelos danos que causar na prestação do serviço, nos limites da lei. Não responde por
+            O Neuro-Log responde pelos danos que causar na prestação do serviço, nos limites da lei. Não responde por
             decisões clínicas, por informações registradas pelo USUÁRIO nem por danos causados pelo uso indevido de
             credenciais sob guarda do USUÁRIO.
           </P>
@@ -302,23 +302,23 @@ function LegalDocs() {
         <section>
           <H2 id="tratamento">Acordo de Tratamento de Dados (Controlador e Operador)</H2>
           <P>
-            Este Acordo integra os Termos de Uso e regula o tratamento, pelo NeuroLog (Operador), dos dados de pacientes
+            Este Acordo integra os Termos de Uso e regula o tratamento, pelo Neuro-Log (Operador), dos dados de pacientes
             registrados pelo USUÁRIO (Controlador), conforme o art. 39 da LGPD.
           </P>
           <UL>
-            <li><strong>Instruções:</strong> o NeuroLog trata os dados apenas para prestar o serviço e conforme as instruções do USUÁRIO, dadas pelo uso do sistema ou por escrito.</li>
+            <li><strong>Instruções:</strong> o Neuro-Log trata os dados apenas para prestar o serviço e conforme as instruções do USUÁRIO, dadas pelo uso do sistema ou por escrito.</li>
             <li><strong>Sigilo:</strong> só pessoas autorizadas e comprometidas com sigilo acessam a infraestrutura, e apenas quando necessário, como no suporte pedido pelo USUÁRIO ou na correção de falhas.</li>
             <li><strong>Segurança:</strong> são mantidas as medidas descritas no item 5 da Política de Privacidade.</li>
             <li><strong>Suboperadores:</strong> o USUÁRIO autoriza os fornecedores listados no item 4 da Política. Novos fornecedores que tratem dados de pacientes serão comunicados com antecedência, e o USUÁRIO poderá encerrar o contrato se discordar.</li>
             <li><strong>Incidentes:</strong> aviso ao USUÁRIO em até 48 horas da ciência, com apoio às comunicações devidas.</li>
-            <li><strong>Direitos dos titulares:</strong> o NeuroLog apoia o USUÁRIO no atendimento a pedidos de pacientes, inclusive com a exportação dos dados.</li>
-            <li><strong>Fim do contrato:</strong> quando pedido, o NeuroLog entrega ao USUÁRIO cópia completa dos prontuários em formato legível, e mantém a guarda pelo prazo legal enquanto ela não for assumida pelo USUÁRIO.</li>
-            <li><strong>Prestação de contas:</strong> quando pedido, o NeuroLog fornece as informações necessárias para demonstrar o cumprimento deste Acordo, incluindo extratos da trilha de auditoria da conta do USUÁRIO.</li>
+            <li><strong>Direitos dos titulares:</strong> o Neuro-Log apoia o USUÁRIO no atendimento a pedidos de pacientes, inclusive com a exportação dos dados.</li>
+            <li><strong>Fim do contrato:</strong> quando pedido, o Neuro-Log entrega ao USUÁRIO cópia completa dos prontuários em formato legível, e mantém a guarda pelo prazo legal enquanto ela não for assumida pelo USUÁRIO.</li>
+            <li><strong>Prestação de contas:</strong> quando pedido, o Neuro-Log fornece as informações necessárias para demonstrar o cumprimento deste Acordo, incluindo extratos da trilha de auditoria da conta do USUÁRIO.</li>
           </UL>
         </section>
 
         <p className="text-xs text-slate-400 mt-12 text-center">
-          NeuroLog · {EMPRESA} · CNPJ {CNPJ} · Londrina/PR · {EMAIL} · Versão {VERSAO}
+          Neuro-Log · {EMPRESA} · CNPJ {CNPJ} · Londrina/PR · {EMAIL} · Versão {VERSAO}
         </p>
       </div>
     </div>

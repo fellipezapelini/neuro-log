@@ -99,7 +99,7 @@ function App() {
     {
       question: 'Os dados da minha clínica e dos pacientes ficam seguros?',
       answer:
-        'Totalmente seguros. O NeuroLog utiliza criptografia avançada e opera em estrita conformidade com a Lei Geral de Proteção de Dados (LGPD) e resoluções do CFM, garantindo sigilo e segurança em nível bancário.',
+        'Totalmente seguros. O Neuro-Log utiliza criptografia avançada e opera em estrita conformidade com a Lei Geral de Proteção de Dados (LGPD) e resoluções do CFM, garantindo sigilo e segurança em nível bancário.',
     },
     {
       question: 'Se eu errar uma prescrição, posso editar o receituário?',
@@ -124,7 +124,7 @@ function App() {
     {
       question: 'Vou tirar férias. Posso pausar o recebimento de agendamentos?',
       answer:
-        "Sim! O NeuroLog possui um 'Modo Férias' que você ativa direto no seu perfil. Ele pausa temporariamente a sua agenda online, evitando que pacientes marquem consultas enquanto você descansa.",
+        "Sim! O Neuro-Log possui um 'Modo Férias' que você ativa direto no seu perfil. Ele pausa temporariamente a sua agenda online, evitando que pacientes marquem consultas enquanto você descansa.",
     },
   ];
 
@@ -138,7 +138,7 @@ function App() {
           <div className="flex items-center gap-0">
             <img
               src={neuroLogLogo}
-              alt="Logo NeuroLog"
+              alt="Logo Neuro-Log"
               className="w-20 h-20 object-contain scale-[1.2] translate-y-[2px] drop-shadow-[0_0_15px_rgba(255,255,255,0.7)]"
             />
             <span className="text-2xl font-black tracking-wider text-[#0F172A] ml-1">
@@ -234,7 +234,7 @@ function App() {
               Uma plataforma. <span className="text-[#092c77]">Tudo integrado.</span>
             </h2>
             <p className="text-slate-600 text-lg">
-              O NeuroLog reúne em uma única tela o que você hoje usa em vários sistemas.
+              O Neuro-Log reúne em uma única tela o que você hoje usa em vários sistemas.
             </p>
           </div>
 
@@ -498,7 +498,7 @@ function App() {
         </div>
 
         <div className="max-w-7xl mx-auto pt-8 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500">
-          <p>© {new Date().getFullYear()} NeuroLog. Todos os direitos reservados.</p>
+          <p>© {new Date().getFullYear()} Neuro-Log. Todos os direitos reservados.</p>
           <div className="flex gap-4">
             <a href="/documentacao-legal" target="_blank" rel="noopener noreferrer" className="hover:text-slate-300 transition-colors">
               Termos de Uso
