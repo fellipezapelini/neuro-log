@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import App from './App.jsx';
 import LegalDocs from './LegalDocs.jsx';
+import AvisoCookies from './AvisoCookies.jsx';
 import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -12,6 +13,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path="/" element={<App />} />
         <Route path="/documentacao-legal" element={<LegalDocs />} />
       </Routes>
+      <AvisoCookies />
     </BrowserRouter>
   </React.StrictMode>
 );

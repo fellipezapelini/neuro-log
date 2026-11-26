@@ -1,4 +1,5 @@
 import React from 'react';
+import { abrirPreferenciasCookies } from './AvisoCookies.jsx';
 
 // Versão dos documentos: precisa ser a mesma de VERSAO_TERMOS no sistema
 // (config/neurolog.php). Ao mudar, todos os usuários aceitam de novo no próximo acesso.
@@ -113,11 +114,30 @@ function LegalDocs() {
               nome do paciente no texto enviado à IA.
             </li>
           </UL>
-          <P>
-            <strong>3.3. Visitantes do site</strong>: o site de apresentação (neurolog.med.br) usa cookies de medição e de
-            campanhas (Google Tag Manager/Ads). O sistema (sistema.neurolog.med.br) usa apenas o armazenamento necessário
-            para manter a sessão do usuário.
-          </P>
+          <div id="cookies" className="scroll-mt-8">
+            <P>
+              <strong>3.3. Visitantes do site e cookies</strong>: o site de apresentação (neurolog.med.br) mostra um aviso
+              de cookies na primeira visita.
+            </P>
+            <UL>
+              <li><strong>Essenciais</strong> (sempre ativos): guardam a sua escolha sobre cookies e permitem o funcionamento do site.</li>
+              <li>
+                <strong>Medição e campanhas</strong> (Google Tag Manager, Google Analytics e Google Ads): só são ativados se
+                você clicar em “Aceitar todos”. Servem para contar visitas e medir o resultado de anúncios. Base legal:
+                consentimento (art. 7º, I da LGPD).
+              </li>
+              <li>A escolha vale por 12 meses e pode ser mudada a qualquer momento.</li>
+            </UL>
+            <p className="mb-4">
+              <button type="button" onClick={abrirPreferenciasCookies} className="font-bold text-[#092c77] underline">
+                Alterar minhas preferências de cookies
+              </button>
+            </p>
+            <P>
+              O sistema (sistema.neurolog.med.br) não usa cookies de medição nem de anúncios: usa apenas o armazenamento
+              necessário para manter a sessão do usuário e as preferências de tela.
+            </P>
+          </div>
 
           <H3>4. Com quem os dados são compartilhados</H3>
           <P>

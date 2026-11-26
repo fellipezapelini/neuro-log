@@ -1,23 +1,41 @@
 <!doctype html>
 <html lang="pt-br">
   <head>
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-MWFRZCB8');</script>
-    <!-- End Google Tag Manager -->
+    <!--
+      Cookies (LGPD): o Google Tag Manager (Analytics e Ads) só é carregado depois
+      que o visitante aceita no aviso de cookies. Até lá, o consentimento fica
+      "negado" e nenhum cookie de medição ou anúncio é gravado.
+    -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){ dataLayer.push(arguments); }
+      gtag('consent', 'default', {
+        ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'denied'
+      });
+      window.neurologCarregarGTM = function () {
+        if (window.__neurologGTM) return;
+        window.__neurologGTM = true;
+        gtag('consent', 'update', {
+          ad_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'granted', analytics_storage: 'granted'
+        });
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-MWFRZCB8');
+      };
+      try {
+        var escolha = JSON.parse(localStorage.getItem('neurolog_cookies') || 'null');
+        var valida = escolha && (Date.now() - escolha.em) < 365 * 24 * 3600 * 1000;
+        if (valida && escolha.valor === 'aceito') window.neurologCarregarGTM();
+      } catch (e) { /* sem armazenamento: só carrega após aceite nesta visita */ }
+    </script>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Neuro-Log | Prontuário Eletrônico e Telemedicina</title>
   </head>
   <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MWFRZCB8"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager -->
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import neuroLogLogo from './assets/neuroLogLogo.png';
+import { abrirPreferenciasCookies } from './AvisoCookies.jsx';
 import mockupImg from './assets/hero.png';
 import mobileImg from './assets/mobile.png';
 
@@ -500,12 +501,15 @@ function App() {
         <div className="max-w-7xl mx-auto pt-8 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500">
           <p>© {new Date().getFullYear()} Neuro-Log. Todos os direitos reservados.</p>
           <div className="flex gap-4">
-            <a href="/documentacao-legal" target="_blank" rel="noopener noreferrer" className="hover:text-slate-300 transition-colors">
+            <a href="/documentacao-legal#termos" target="_blank" rel="noopener noreferrer" className="hover:text-slate-300 transition-colors">
               Termos de Uso
             </a>
-            <a href="/documentacao-legal" target="_blank" rel="noopener noreferrer" className="hover:text-slate-300 transition-colors">
+            <a href="/documentacao-legal#privacidade" target="_blank" rel="noopener noreferrer" className="hover:text-slate-300 transition-colors">
               Política de Privacidade
             </a>
+            <button type="button" onClick={abrirPreferenciasCookies} className="hover:text-slate-300 transition-colors">
+              Preferências de cookies
+            </button>
           </div>
         </div>
       </footer>
