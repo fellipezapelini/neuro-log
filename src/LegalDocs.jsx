@@ -6,6 +6,8 @@ const VERSAO = '2026-11-26';
 const VIGENCIA = '26 de novembro de 2026';
 const EMAIL = 'neurolog.med.br@gmail.com';
 const WHATSAPP = '(43) 97400-0934';
+const EMPRESA = '67.051.484 FELLIPE VALENTINO ZAPELINI';
+const CNPJ = '67.051.484/0001-79';
 
 const H2 = ({ id, children }) => (
   <h2 id={id} className="text-3xl font-bold text-[#092c77] mb-6 scroll-mt-8">{children}</h2>
@@ -58,8 +60,9 @@ function LegalDocs() {
 
           <H3>1. Quem somos e como falar conosco</H3>
           <P>
-            O NeuroLog é mantido por <strong>Fellipe Valentino Zapelini</strong>, em Londrina/PR, que também atua como{' '}
-            <strong>Encarregado pelo Tratamento de Dados Pessoais</strong>. Pedidos sobre dados pessoais, dúvidas e
+            O NeuroLog é mantido por <strong>{EMPRESA}</strong>, inscrita no CNPJ sob o nº <strong>{CNPJ}</strong>, com
+            sede em Londrina/PR. O Encarregado pelo Tratamento de Dados Pessoais é{' '}
+            <strong>Fellipe Valentino Zapelini</strong>. Pedidos sobre dados pessoais, dúvidas e
             comunicações de incidentes: e-mail{' '}
             <a href={`mailto:${EMAIL}`} className="text-[#092c77] font-bold">{EMAIL}</a> ou WhatsApp {WHATSAPP}.
             Respondemos em até 15 dias.
@@ -315,7 +318,7 @@ function LegalDocs() {
         </section>
 
         <p className="text-xs text-slate-400 mt-12 text-center">
-          NeuroLog · Londrina/PR · {EMAIL} · Versão {VERSAO}
+          NeuroLog · {EMPRESA} · CNPJ {CNPJ} · Londrina/PR · {EMAIL} · Versão {VERSAO}
         </p>
       </div>
     </div>
