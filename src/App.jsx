@@ -85,13 +85,38 @@ function App() {
       title: 'Segurança LGPD',
       desc: 'Dados criptografados e total conformidade com a Lei de Proteção de Dados.',
       detailedDesc:
-        'Seus dados e os dados sensíveis de saúde dos seus pacientes são armazenados com criptografia de ponta a ponta (nível de segurança bancário). Realizamos rotinas de backup diárias e mantemos rastreabilidade total de acessos.',
+        'Conexão sempre criptografada (HTTPS), senhas e certificados guardados criptografados, cópia de segurança diária criptografada fora do servidor e trilha de auditoria que registra cada acesso ao prontuário e não pode ser apagada. A secretária tem acesso próprio, sem ver dados clínicos.',
       icon: '🛡️',
       color: 'bg-slate-100 text-slate-600',
     },
   ];
 
   const faqs = [
+    {
+      question: 'Já uso outro sistema. Vou perder o histórico dos meus pacientes?',
+      answer:
+        'Não. Você exporta os pacientes e os atendimentos do sistema antigo em planilha e envia no Neuro-Log. Antes de gravar, aparece uma prévia de cada linha: o que entra, o que já existe (nada é duplicado) e o que tem erro. No fim, você baixa um comprovante com o resultado de cada linha. Se preferir, nossa equipe faz a migração junto com você.',
+    },
+    {
+      question: 'O Neuro-Log tem o selo SBIS?',
+      answer:
+        'Ainda não, e preferimos dizer isso com clareza. O sistema foi construído a partir dos requisitos técnicos do Manual de Certificação SBIS/CFM (nível NGS1): trilha de auditoria que não pode ser apagada, registros corrigidos por errata (nada é excluído), assinatura digital ICP-Brasil, controle de acesso por perfil, sessão que expira sozinha e cópia de segurança diária. Você pode conferir cada item na demonstração.',
+    },
+    {
+      question: 'O valor é por médico? A secretária paga à parte?',
+      answer:
+        'O plano é por médico. A secretária entra pela conta do médico, com login próprio, sem custo extra: ela vê agenda e cadastro, mas não vê dados clínicos. Uma mesma secretária pode atender mais de um médico.',
+    },
+    {
+      question: 'E se um dia eu quiser sair?',
+      answer:
+        'Seus dados são seus. Em Configurações, você baixa tudo (pacientes, atendimentos, alergias, diagnósticos, exames e receitas) em planilhas abertas, a qualquer momento e sem pedir para ninguém.',
+    },
+    {
+      question: 'Como funciona o suporte?',
+      answer:
+        'Por gente, não por robô. Dentro do sistema você abre um chamado com número de protocolo e prazo de resposta, e acompanha a conversa por lá. Para algo urgente, chame no WhatsApp.',
+    },
     {
       question: 'Preciso cadastrar o cartão de crédito para testar grátis?',
       answer:
@@ -100,7 +125,7 @@ function App() {
     {
       question: 'Os dados da minha clínica e dos pacientes ficam seguros?',
       answer:
-        'Totalmente seguros. O Neuro-Log utiliza criptografia avançada e opera em estrita conformidade com a Lei Geral de Proteção de Dados (LGPD) e resoluções do CFM, garantindo sigilo e segurança em nível bancário.',
+        'Sim. A conexão é sempre criptografada, cada acesso ao prontuário fica registrado numa trilha de auditoria que não pode ser apagada, a cópia de segurança é diária e criptografada, e a secretária não vê dados clínicos. A política de privacidade e os termos estão publicados na Documentação legal, no rodapé.',
     },
     {
       question: 'Se eu errar uma prescrição, posso editar o receituário?',
@@ -149,6 +174,8 @@ function App() {
 
           <nav className="hidden md:flex gap-8 text-sm font-medium text-slate-700">
             <a href="#funcionalidades" className="hover:text-[#1A56DB] transition-colors">Funcionalidades</a>
+            <a href="#migracao" className="hover:text-[#1A56DB] transition-colors">Migração</a>
+            <a href="#seguranca" className="hover:text-[#1A56DB] transition-colors">Segurança</a>
             <a href="#planos" className="hover:text-[#1A56DB] transition-colors">Planos</a>
             <a href="#faq" className="hover:text-[#1A56DB] transition-colors">Dúvidas</a>
           </nav>
@@ -181,7 +208,7 @@ function App() {
           O Prontuário Eletrônico Inteligente que reúne Agenda, Telemedicina e Prescrição Memed em uma única tela.
         </p>
 
-        <div className="flex justify-center w-full mb-20">
+        <div className="flex justify-center w-full mb-8">
           <button
             onClick={() => setVideoAberto(true)}
             className="bg-white/50 hover:bg-white border border-white text-slate-900 px-8 py-4 rounded-xl font-bold transition-all backdrop-blur-sm flex items-center gap-3 shadow-lg hover:scale-105"
@@ -196,6 +223,12 @@ function App() {
             Ver demonstração
           </button>
         </div>
+
+        <ul className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm font-semibold text-slate-600 mb-20">
+          {['14 dias grátis, sem cartão', 'Migração assistida do seu sistema atual', 'Exporte seus dados quando quiser', 'Suporte humano'].map((t) => (
+            <li key={t} className="flex items-center gap-2"><span className="text-[#1A56DB]">✓</span> {t}</li>
+          ))}
+        </ul>
 
         {/* MOCKUP */}
         <div className="w-full max-w-6xl bg-white/50 backdrop-blur-md rounded-[40px] border border-white shadow-2xl overflow-hidden p-8 md:p-16 flex flex-col lg:flex-row items-center gap-12 text-left mb-32">
@@ -271,6 +304,69 @@ function App() {
           </div>
         </section>
 
+        {/* MIGRAÇÃO */}
+        <section id="migracao" className="w-full pt-20 pb-10 scroll-mt-24">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-4">
+              Trocar de sistema <span className="text-[#092c77]">sem perder nada.</span>
+            </h2>
+            <p className="text-slate-600 text-lg max-w-2xl mx-auto">
+              O medo de perder o histórico dos pacientes é o que mais segura uma troca. Por isso, a migração mostra tudo antes de gravar e deixa uma prova do que foi feito.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+            {[
+              ['1', 'Exporte do sistema atual', 'Pacientes e atendimentos em planilha (CSV, ou Excel salvo como CSV). O Neuro-Log reconhece as colunas sozinho: nome, CPF, nascimento, convênio, evolução, diagnóstico, conduta.'],
+              ['2', 'Confira a prévia', 'Antes de gravar, você vê o que entra, o que já existe e o que tem erro, linha por linha. Nada é duplicado: quem já está cadastrado é reconhecido pelo CPF ou pelo código antigo.'],
+              ['3', 'Guarde o comprovante', 'Um PDF com a impressão digital do arquivo, o resultado de cada linha e o registro na trilha de auditoria. Cada atendimento trazido fica marcado como importado no prontuário.'],
+            ].map(([n, t, d]) => (
+              <div key={n} className="bg-white/60 backdrop-blur-sm border border-white p-8 rounded-[32px] shadow-sm">
+                <div className="w-10 h-10 rounded-full bg-[#092c77] text-white font-black flex items-center justify-center mb-5">{n}</div>
+                <h3 className="text-xl font-black text-slate-900 mb-2">{t}</h3>
+                <p className="text-slate-600 text-sm leading-relaxed">{d}</p>
+              </div>
+            ))}
+          </div>
+          <p className="text-slate-600 text-base mt-8">
+            Prefere não fazer sozinho?{' '}
+            <a href="https://wa.me/5543974000934?text=Ol%C3%A1%21%20Quero%20migrar%20meus%20pacientes%20para%20o%20Neuro-Log." target="_blank" rel="noopener noreferrer" className="font-bold text-[#1A56DB] hover:underline">Chame a gente</a>{' '}
+            e fazemos a migração junto com você. E, se um dia quiser sair, você exporta tudo em planilha aberta.
+          </p>
+        </section>
+
+        {/* SEGURANÇA */}
+        <section id="seguranca" className="w-full pt-20 pb-10 scroll-mt-24">
+          <div className="max-w-5xl mx-auto bg-white/60 backdrop-blur-md border border-white rounded-[40px] shadow-xl p-8 md:p-14 text-left">
+            <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-4">
+              Segurança que você <span className="text-[#092c77]">pode conferir.</span>
+            </h2>
+            <p className="text-slate-600 text-lg mb-8">
+              Transparência primeiro: o Neuro-Log ainda não tem o selo SBIS. O sistema foi construído a partir dos requisitos técnicos do Manual de Certificação SBIS/CFM (nível NGS1), e cada item abaixo já funciona hoje. Na demonstração, mostramos um por um.
+            </p>
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-4 text-slate-700">
+              {[
+                ['Trilha de auditoria:', 'registra cada acesso e alteração e não pode ser apagada nem editada.'],
+                ['Nada é excluído do prontuário:', 'correções entram como errata, com data e autor.'],
+                ['Assinatura digital ICP-Brasil:', 'certificado A1 em receitas, atestados e encaminhamentos.'],
+                ['Acesso por perfil:', 'a secretária usa a agenda e o cadastro, sem ver dados clínicos.'],
+                ['Senha forte e bloqueio:', 'a conta trava após tentativas erradas e a sessão expira sozinha quando o computador fica parado.'],
+                ['Cópia de segurança diária:', 'criptografada e guardada fora do servidor.'],
+                ['Portabilidade:', 'você exporta todos os dados em planilha aberta a qualquer momento.'],
+                ['Documentação legal publicada:', 'termos de uso, política de privacidade e contrato de tratamento de dados.'],
+              ].map(([t, d]) => (
+                <li key={t} className="flex gap-3">
+                  <span className="text-[#1A56DB] font-black">✓</span>
+                  <span><b>{t}</b> {d}</span>
+                </li>
+              ))}
+            </ul>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <a href="/documentacao-legal" className="inline-block bg-white hover:bg-slate-50 text-slate-900 px-6 py-3 rounded-2xl font-bold border border-slate-200 shadow-sm">Ver documentação legal</a>
+              <a href="https://wa.me/5543974000934?text=Ol%C3%A1%21%20Quero%20uma%20demonstra%C3%A7%C3%A3o%20do%20Neuro-Log." target="_blank" rel="noopener noreferrer" className="inline-block bg-[#092c77] hover:bg-blue-700 text-white px-6 py-3 rounded-2xl font-bold shadow-lg">Agendar demonstração</a>
+            </div>
+          </div>
+        </section>
+
         {/* PLANOS */}
         <section id="planos" className="w-full pt-20 pb-10">
           <div className="text-center mb-16">
@@ -287,11 +383,11 @@ function App() {
               <p className="text-slate-500 text-sm mb-6">Flexibilidade para o seu negócio.</p>
 
               <div className="mb-2">
-                <span className="text-5xl font-black text-slate-900">R$ 681</span>
-                <span className="text-slate-500 font-medium"> / 3 meses</span>
+                <span className="text-5xl font-black text-slate-900">R$ 227</span>
+                <span className="text-slate-500 font-medium"> /mês</span>
               </div>
               <p className="text-sm text-slate-500 mb-8 font-medium">
-                Equivale a R$ 227/mês · em até 3x sem juros no cartão
+                R$ 681 a cada 3 meses · em até 3x sem juros no cartão
               </p>
 
               <ul className="space-y-4 mb-10 flex-1">
@@ -299,7 +395,10 @@ function App() {
                   <span className="text-[#1A56DB]">✓</span> Acesso completo a todas as funcionalidades
                 </li>
                 <li className="flex items-center gap-3 text-slate-700">
-                  <span className="text-[#1A56DB]">✓</span> Suporte humanizado
+                  <span className="text-[#1A56DB]">✓</span> Suporte humano, com chamado e WhatsApp
+                </li>
+                <li className="flex items-center gap-3 text-slate-700">
+                  <span className="text-[#1A56DB]">✓</span> Migração assistida e secretária sem custo extra
                 </li>
                 <li className="flex items-center gap-3 text-slate-700">
                   <span className="text-[#1A56DB]">✓</span> Atualizações gratuitas
@@ -324,11 +423,11 @@ function App() {
               <p className="text-blue-200 text-sm mb-6">Economia máxima para sua clínica.</p>
 
               <div className="mb-2">
-                <span className="text-5xl font-black text-white">R$ 2.196</span>
-                <span className="text-blue-200 font-medium"> / 12 meses</span>
+                <span className="text-5xl font-black text-white">R$ 183</span>
+                <span className="text-blue-200 font-medium"> /mês</span>
               </div>
               <p className="text-sm text-blue-200 mb-8 font-medium">
-                Equivale a R$ 183/mês · em até 12x sem juros no cartão
+                Plano anual: 12x de R$ 183 sem juros no cartão (R$ 2.196 no total)
               </p>
 
               <ul className="space-y-4 mb-10 flex-1">
@@ -336,7 +435,10 @@ function App() {
                   <span className="text-blue-300">✓</span> Acesso completo a todas as funcionalidades
                 </li>
                 <li className="flex items-center gap-3 text-white">
-                  <span className="text-blue-300">✓</span> Suporte humanizado prioritário
+                  <span className="text-blue-300">✓</span> Suporte humano prioritário, com chamado e WhatsApp
+                </li>
+                <li className="flex items-center gap-3 text-white">
+                  <span className="text-blue-300">✓</span> Migração assistida e secretária sem custo extra
                 </li>
                 <li className="flex items-center gap-3 text-white">
                   <span className="text-blue-300">✓</span> Atualizações gratuitas
@@ -354,6 +456,9 @@ function App() {
               </a>
             </div>
           </div>
+          <p className="text-center text-slate-600 mt-10">
+            Comece com <b>14 dias grátis, sem cartão</b>. Valor por médico; a secretária entra pela sua conta sem custo extra.
+          </p>
         </section>
 
         {/* FAQ */}
